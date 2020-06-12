@@ -156,6 +156,7 @@ enum nxt_i2c_sensor_type {
 	MS_PPS58_NX,
 	MI_CRUIZCORE_XG1300L,
 	PX_PIXY,
+	TM_IRPFLINK,
 	NUM_NXT_I2C_SENSORS
 };
 
@@ -194,6 +195,7 @@ enum nxt_i2c_sensor_type {
 #define MS_PPS58_NX_NAME			"ms-pps58-nx"
 #define MI_CRUIZCORE_XG1300L_NAME		"mi-xg1300l"
 #define PX_PIXY_NAME				"pixy-lego"
+#define TM_IRPFLINK			  		"tm-irpflink"
 
 /*
  * This table is shared by the nxt-i2c-sensor and ht-nxt-smux-i2c-sensor modules.
@@ -228,6 +230,7 @@ enum nxt_i2c_sensor_type {
 	LEGO_DEVICE_ID(MS_PPS58_NX),				\
 	LEGO_DEVICE_ID(MI_CRUIZCORE_XG1300L),			\
 	LEGO_DEVICE_ID(PX_PIXY),				\
+	LEGO_DEVICE_ID(TM_IRPFLINK)             \
 	{ }
 
 extern struct i2c_driver nxt_i2c_sensor_driver;

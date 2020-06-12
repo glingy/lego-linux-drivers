@@ -3400,6 +3400,34 @@ const struct nxt_i2c_sensor_info nxt_i2c_sensor_defs[] = {
 			},
 		},
 	},
+	[TM_IRPFLINK] = {
+		/**
+		 * @vendor_name: TURTLMKR
+		 * @vendor_part_number: IRPFLINK
+		 * @vendor_part_name: Infrared PowerFunctions Link
+		 * @vendor_website: none
+		 * @default_address: 0x01
+		 */
+		.name		= TM_IRPFLINK,
+		.vendor_id	= "TURTLMKR",
+		.product_id	= "IRPFLINK",
+		.num_modes	= 1,
+		.mode_info	= (const struct lego_sensor_mode_info[]) {
+			[0] = {
+				/**
+				 * @description: Continuous measurement
+				 * @value0: Temperature (-550 to 1280)
+				 * @units_description: °C
+				 */
+				.name	= "default",
+			},
+		},
+		.i2c_mode_info	= (const struct nxt_i2c_sensor_mode_info[]) {
+			[0] = {
+				.read_data_reg	= 0x42,
+			},
+		},
+	},
 };
 
 EXPORT_SYMBOL_GPL(nxt_i2c_sensor_defs);
