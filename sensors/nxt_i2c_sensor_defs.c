@@ -3408,7 +3408,7 @@ const struct nxt_i2c_sensor_info nxt_i2c_sensor_defs[] = {
 		 * @vendor_website: none
 		 * @default_address: 0x01
 		 */
-		.name		= TM_IRPFLINK,
+		.name		= TM_IRPFLINK_NAME,
 		.vendor_id	= "TURTLMKR",
 		.product_id	= "IRPFLINK",
 		.num_modes	= 1,
