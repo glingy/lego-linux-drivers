@@ -195,7 +195,7 @@ enum nxt_i2c_sensor_type {
 #define MS_PPS58_NX_NAME			"ms-pps58-nx"
 #define MI_CRUIZCORE_XG1300L_NAME		"mi-xg1300l"
 #define PX_PIXY_NAME				"pixy-lego"
-#define TM_IRPFLINK			  		"tm-irpflink"
+#define TM_IRPFLINK_NAME			  		"tm-irpflink"
 
 /*
  * This table is shared by the nxt-i2c-sensor and ht-nxt-smux-i2c-sensor modules.
