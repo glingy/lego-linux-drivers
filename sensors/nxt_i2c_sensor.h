@@ -230,7 +230,7 @@ enum nxt_i2c_sensor_type {
 	LEGO_DEVICE_ID(MS_PPS58_NX),				\
 	LEGO_DEVICE_ID(MI_CRUIZCORE_XG1300L),			\
 	LEGO_DEVICE_ID(PX_PIXY),				\
-	LEGO_DEVICE_ID(TM_IRPFLINK)             \
+	LEGO_DEVICE_ID(TM_IRPFLINK),             \
 	{ }
 
 extern struct i2c_driver nxt_i2c_sensor_driver;
