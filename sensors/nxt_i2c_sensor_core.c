@@ -454,21 +454,17 @@ static int nxt_i2c_sensor_detect(struct i2c_client *client,
 	if (ret < 0)
 		return -ENODEV;
 	
-	printk("Found sensor with vendor ID: %s and product ID: %s\n", vendor_id, product_id);
 
 	for (i = 0; i < NUM_NXT_I2C_SENSORS; i++) {
-		printk("Comparing '%s' to '%s'\n", nxt_i2c_sensor_defs[i].vendor_id, strim(vendor_id));
 		if (strcmp(nxt_i2c_sensor_defs[i].vendor_id, strim(vendor_id))) {
 			if (!nxt_i2c_sensor_defs[i].alt_vendor_id)
 				continue; /* vendor_id does not match and no alt */
 			if (strcmp(nxt_i2c_sensor_defs[i].alt_vendor_id, strim(vendor_id)))
 				continue; /* alt_vendor_id does not match */
 		}
-		printk("Comparing '%s' to '%s'\n", nxt_i2c_sensor_defs[i].product_id, strim(product_id));
 		if (strcmp(nxt_i2c_sensor_defs[i].product_id, strim(product_id)))
 			continue; /* product_id does not match */
 
-		printk("Found one!");
 		snprintf(info->type, I2C_NAME_SIZE, nxt_i2c_sensor_defs[i].name);
 		return 0;
 	}
