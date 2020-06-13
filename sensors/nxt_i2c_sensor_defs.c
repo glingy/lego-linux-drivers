@@ -3412,14 +3412,13 @@ const struct nxt_i2c_sensor_info nxt_i2c_sensor_defs[] = {
 		.vendor_id	= "TURTLMKR",
 		.product_id	= "IRPFLINK",
 		.num_modes	= 1,
+		.poll_ms = 0,
 		.mode_info	= (const struct lego_sensor_mode_info[]) {
 			[0] = {
 				/**
 				 * @description: Continuous measurement
-				 * @value0: Temperature (-550 to 1280)
-				 * @units_description: °C
 				 */
-				.name	= "default",
+				.name	= "MAIN",
 			},
 		},
 		.i2c_mode_info	= (const struct nxt_i2c_sensor_mode_info[]) {
